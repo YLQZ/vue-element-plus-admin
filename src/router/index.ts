@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw, } from 'vue-router';
 
-import Layout from '@/layout';
+import Layout from '@/layout/index.vue';
 
 import Home from '../views/Home.vue';
 
@@ -17,7 +17,7 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: 'dashboard',
-        component: () => import('@/views/dashboard/index'),
+        component: () => import('@/views/dashboard/index.vue'),
         name: 'Dashboard',
         meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
       }
